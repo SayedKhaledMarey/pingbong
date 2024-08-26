@@ -102,11 +102,9 @@ class _MatchupScreenState extends State<MatchupScreen> {
 
     final matches = <String>[];
     final group2Teams = List.of(_group2Teams);
-
     // Shuffle Group 2 teams to ensure randomness
     group2Teams.shuffle();
     group2Teams.shuffle();
-
     // Pair teams from Group 1 with shuffled Group 2 teams
     for (int i = 0; i < _group1Teams.length; i++) {
       final team1 = _group1Teams[i];
@@ -167,13 +165,13 @@ class _MatchupScreenState extends State<MatchupScreen> {
                           borderRadius: BorderRadius.circular(15.r),
                           borderSide: const BorderSide(
                             color: Colors.green,
-                          ), // Border color when focused
+                          ),
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15.r),
                           borderSide: const BorderSide(
                             color: Colors.green,
-                          ), // Border color when enabled but not focused
+                          ),
                         ),
                       ),
                       keyboardType: TextInputType.number,
@@ -189,13 +187,13 @@ class _MatchupScreenState extends State<MatchupScreen> {
                           borderRadius: BorderRadius.circular(15),
                           borderSide: const BorderSide(
                             color: Colors.green,
-                          ), // Border color when focused
+                          ),
                         ),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15.r),
                           borderSide: const BorderSide(
                             color: Colors.green,
-                          ), // Border color when enabled but not focused
+                          ),
                         ),
                       ),
                       keyboardType: TextInputType.number,
@@ -290,8 +288,7 @@ class _MatchupScreenState extends State<MatchupScreen> {
                       ],
                     ))
                   : SizedBox(
-                      height: MediaQuery.of(context).size.height *
-                          0.4, // Adjust as needed
+                      height: MediaQuery.of(context).size.height * 0.4,
                       child: ListView.separated(
                         itemCount: _matches.length,
                         itemBuilder: (BuildContext context, int index) {
